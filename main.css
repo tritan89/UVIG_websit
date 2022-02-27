@@ -2,6 +2,7 @@
     --orange: #ff9900;
     --white: #ffffff;
     --black: #000000;
+    --blue: #71b4ff;
   }
 
 
@@ -13,21 +14,46 @@
       background: var(--bg);
   }
 
-ul {
+
+
+  ul.nav {
     font-family: helvetica;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+ul.circle li{
+  float: none;
+  list-style-type: circle;
+  background: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+
 }
 
-li {
-    list-style: circle;
-  }
-  
-  .list {
-    list-style: square;
-  }
-  
 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
   .light-theme {
-    --bg: var(--orange);
+    --bg: var(--blue);
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--white);
@@ -35,7 +61,7 @@ li {
   
   .dark-theme {
     --bg: var(--black);
-    --fontColor: var(--orange);
+    --fontColor: var(--blue);
     --btnBg: var(--white);
     --btnFontColor: var(--black);
   }
@@ -43,7 +69,7 @@ li {
   .btn {
     position: absolute;
     top: 20px;
-    left: 250px;
+    left: 400px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
